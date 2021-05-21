@@ -12,8 +12,7 @@ function sample1() {
 
 }
 
-
-sample
 b=200
+sample
 echo c=$c
 sample1 fight
