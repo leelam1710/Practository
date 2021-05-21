@@ -8,7 +8,7 @@ echo Hello from sample function
 
 
 #way2 of declaring functions
-funtion sample1() {
+function sample1() {
 echo Hello from sample1 funciton
 }
 
