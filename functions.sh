@@ -7,6 +7,7 @@ sample() {
 }
 
 function sample1() {
+  return
   echo Hello again from sample1 function.
   echo "first argument = $1"
 
