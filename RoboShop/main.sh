@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sh /Components/Cart.sh
+sh /Components/$1.sh
