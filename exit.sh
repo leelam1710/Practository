@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Hello World"
-exit 124
+exit
 echo "Things listen"
