@@ -1,5 +1,5 @@
 #!/bin/bash
 
 if [ "$USER" != "root" ]; then
-  echo "u r a root user."
+  echo "u r  not a root user."
 fi
