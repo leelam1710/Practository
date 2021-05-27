@@ -5,5 +5,6 @@ echo "welcome to cart"
 COMPONENT=Cart
 
 source Components/Common.sh
-Print Installing
+
+Print "Installing Cart"
 
