@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #creating instance script
 component=$1
 
