@@ -21,4 +21,4 @@ export IPADDRESS
 
 envsubst <record.json >/tmp/${component}.json
 
-aws route53 change-resource-record-sets --hosted-zone-id Z076258917LZOFQ2TZ491 --change-batch file:///tmp/${component}.json
+aws route53 change-resource-record-sets --hosted-zone-id Z00339063TJYG8SBV0FZX --change-batch file:///tmp/${component}.json
