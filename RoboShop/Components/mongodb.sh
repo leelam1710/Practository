@@ -2,7 +2,7 @@
 
 COMPONENT=mongodb
 
-source components/common.sh
+source Components/common.sh
 
 Print "Setup MongoDB Repo" ""
 echo '[mongodb-org-4.2]
