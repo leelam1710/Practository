@@ -21,4 +21,4 @@ export IPADDRESS
 
 envsubst <record.json >/tmp/"${component}".json
 
-aws route53 change-resource-record-sets --hosted-zone-id Z00339063TJYG8SBV0FZX --change-batch file:///home/cloudshell-user/Practository/RoboShop/"${component}".json
+aws route53 change-resource-record-sets --hosted-zone-id Z00339063TJYG8SBV0FZX --change-batch file://tmp/"${component}".json
