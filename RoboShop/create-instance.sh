@@ -10,7 +10,7 @@ fi
 
 STATE=$(aws ec2 describe-instances --filters "Name=tag-value,Values=${component}" --query 'Reservations[*].Instances[*].State.Name' --output text)
 
-if [ "$STATE" != "running" ]; then
+if [ "${STATE}" != "running" ]; then
   aws ec2 run-instances --launch-template LaunchTemplateId=lt-01ce3b1e6b2ed30db --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${component}}]"
   sleep 15
 fi
