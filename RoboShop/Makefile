@@ -23,3 +23,7 @@ mongodb:		## Install mongodb
 redis: Common
 redis:			## Install redis
 	@sh Components/redis.sh
+
+user: Common
+user:			## Install user
+	@sh Components/user.sh
