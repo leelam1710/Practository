@@ -22,7 +22,7 @@ rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip
 Stat $?
 
 Print "Install NOdeJS Dependencies" "npm install"
-npm install --unsafe-perm
+npm install -g --unsafe-perm
 Stat $?
 
 chown roboshop:roboshop /home/roboshop -R
