@@ -11,7 +11,7 @@ Stat $?
 Print "Install Redis" "yum-config-manager --enable remi && yum install redis -y"
 yum-config-manager --enable remi && yum install redis -y
 Stat $?
-exit
+
 Print "Update Redis Configuration" "sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf
 Stat $?
