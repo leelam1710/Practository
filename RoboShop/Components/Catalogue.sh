@@ -2,7 +2,7 @@
 
 COMPONENT=catalogue
 
-source components/common.sh
+source Components/Common.sh
 
 Print "Installing NodeJS" "yum install nodejs make gcc-c++ -y"
 yum install nodejs make gcc-c++ -y
