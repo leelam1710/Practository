@@ -2,25 +2,26 @@
 
 COMPONENT=catalogue
 
-source Components/Common.sh
+source components/common.sh
 
 Print "Installing NodeJS" "yum install nodejs make gcc-c++ -y"
 yum install nodejs make gcc-c++ -y
 Stat $?
 
-Print "Adding Roboshop Project user" "useradd roboshop"
+Print "Adding RoboShop Project User" "useradd roboshop"
 id roboshop || useradd roboshop
 Stat $?
 
-Print "Downloading Catalogue Component Code" "curl -s -L -o /home/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-curl -s -L -o /home/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip
+Print "Download Catalogue Component Code" 'curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"'
+
+curl -s -L -o /tmp/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip
 Stat $?
 
-Print "Extracting Catalogue Component Code" "rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue"
-rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /home/catalogue.zip && mv catalogue-main catalogue
+Print  "Extract Catalogue Component Code" "rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue"
+rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue && /home/roboshop/catalogue
 Stat $?
 
-Print "Install NodeJS dependencies" "npm install"
+Print "Install NOdeJS Dependencies" "npm install"
 npm install --unsafe-perm
 Stat $?
 
