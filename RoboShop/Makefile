@@ -20,4 +20,6 @@ mongodb: Common
 mongodb:		## Install mongodb
 	@sh Components/mongodb.sh
 
-
+redis: Common
+redis:		## Install redis
+	@sh: Components/redis.sh
