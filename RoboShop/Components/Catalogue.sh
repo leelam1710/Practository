@@ -12,12 +12,12 @@ Print "Adding Roboshop Project user" "useradd roboshop"
 id roboshop || useradd roboshop
 Stat $?
 
-Print "Downloading Catalogue Component Code" "curl -s -L -o /tmp/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-curl -s -L -o /tmp/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip
+Print "Downloading Catalogue Component Code" "curl -s -L -o /home/Hello/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+curl -s -L -o /home/Hello/catalogue.zip https://github.com/roboshop-devops-project/catalogue/archive/main.zip
 Stat $?
 
 Print "Extracting Catalogue Component Code" "rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue"
-rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
+rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /home/Hello/catalogue.zip && mv catalogue-main catalogue
 Stat $?
 
 chown roboshop:roboshop /home/roboshop -R
