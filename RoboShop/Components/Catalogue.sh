@@ -20,11 +20,12 @@ Print "Extracting Catalogue Component Code" "rm -rf /home/roboshop/catalogue && 
 rm -rf /home/roboshop/catalogue && cd /home/roboshop && unzip /tmp/catalogue.zip && mv catalogue-main catalogue
 Stat $?
 
+chown roboshop:roboshop /home/roboshop -R
+
 Print "Install NodeJS dependencies" "npm install"
 npm install --unsafe-perm
 Stat $?
 
-chown roboshop:roboshop /home/roboshop -R
 
 Print "Update SystemD Script for Catalogue" "sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsb54.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service"
 sed -i -e 's/MONGO_DNSNAME/mongodb-ss.devopsb54.tk/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
