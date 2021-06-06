@@ -2,7 +2,7 @@
 
 COMPONENT=mysql
 
-Source  Components/Common.sh
+source Components/Common.sh
 
 Print "Setup MySQL Repo" ""
 echo '[mysql57-community]
