@@ -41,7 +41,7 @@ Stat $?
 
 Print "Load Schema" "mysql <shipping.sql"
 cd /tmp
-unzip mysql.zip
+unzip -o mysql.zip
 cd mysql-main
-mysql -u root -ppassword <shipping.sql
+mysql -uroot -ppassword <shipping.sql
 Stat $?
