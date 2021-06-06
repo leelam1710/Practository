@@ -18,7 +18,7 @@ Stat $?
 
 Print "Start MySQL" "systemctl enable mysqld && systemctl start mysqld"
 systemctl enable mysqld && systemctl start mysqld
-Stat %?
+Stat $?
 
 echo "show databases;" | mysql -uroot -ppassword &>/dev/null
 if [ $? -ne 0 ]; then
