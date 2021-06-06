@@ -31,3 +31,15 @@ user:			## Install user
 mysql: Common
 mysql:			## Install mysql
 	@sh Components/mysql.sh
+
+shipping: Common
+shipping:			## Install Shipping Component
+	@sh Components/shipping.sh
+
+rabbitmq: Common
+rabbitmq:			## Install rabbitmq Component
+	@sh Components/rabbitmq.sh
+
+payment: Common
+payment:			## Install Payment Component
+	@sh Components/payment.sh
